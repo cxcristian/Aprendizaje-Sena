@@ -13,12 +13,21 @@
 <body>
 
     <div class="header">
-        <h1> PROYECTO AS </h1>
-        <div class="nav">
-            <a href="http://">Sobre mi</a>
-            <a href="http://">visión</a>
-            <a href="public/tareaJS.html">proyectos</a>
+    
+        <h1> PROYECTO APRENDIZAJE SENA </h1>
+        <P>Creciendo en el software</P>
+       
+
+    </div>
+    <div class="nav">
+        <div class="botones">
+        <button><a href="#myInfo">sobre mí</a></button>
+        <button><a href="">vision</a></button>
+        <button><a href="/public/tareaJS.html">proyectos</a></button>
+
         </div>
+        <div class="menu">
+            </div>
     </div>
 
     <div class="bienvenida">
@@ -27,35 +36,73 @@
             <h3>Bienvenido a mi "Proyecto Aprendizaje Sena"</h3>
             <p class="limitar">Aunque me gusta llamaerlo mas "AS", este es un pequeño proyecto
                 está pensado para subir la mayor cantidad de mis actividades relacionadas con la programación que iré realizando según
-                el paso del tiempo, aqui podras encontrar información sobre este futuro o pasado cadaver, proyectos de <a href="">Java Script</a> o lo que surja por el camino
+                el paso del tiempo. <br> qui podras encontrar información sobre este futuro o pasado cadaver, proyectos de <a href="">Java Script</a> o lo que surja por el camino
                 espero que esto sea un buen recuerdo e incluir muchas tecnologias :D
             </p>
             
         </div>
         <div class="contenedor-img">
-            <img src="img/empresarios-y-empresarias-reunidos-para-intercambiar-ideas.jpg" alt="img proyecto">
+            <img style="border-radius: 15px;" src="img/empresarios-y-empresarias-reunidos-para-intercambiar-ideas.jpg" alt="img proyecto">
         </div>
         
     </div>
 
     <div class="sobreMi">
 
-        <div class="info">
-
+        <div class="miFoto">
+            <img style="border-radius: 100px;" src="/img/me.png" alt="yo">
         </div>
-        <div class="mi-foto">
+            
+        <div class="info" id="myInfo">
+            <h2>Sobre mí</h2> 
+            <p> Hola, mi nombre es Cristian Giraldo Álvarez, soy colombiano y tengo 21 años. Actualmente estoy aprendiendo a programar en el SENA, y me apasiona todo lo relacionado con el avance humano hacia un mejor futuro.
+                 Disfruto mucho de los videojuegos, la música, las películas, las series y la lectura. En cuanto a los deportes, aunque los disfruto no son lo mío.<br><br>
 
+                Me considero una persona ética, con buenas habilidades blandas y una buena actitud. Me gusta ayudar a mis compañeros con cualquier duda que tengan, ya que eso también me ayuda a fortalecer mis conocimientos.
+
+                Hasta ahora, mi camino no ha sido fácil; no tener estabilidad económica es un desafío, pero tengo fe y trabajo para cambiar esa situación.
+
+                Eso sería un poco sobre mí. ¡Espero que disfrutes el contenido de este sitio en construcción! :D
+
+            </p>
         </div>
+        
 
     </div>
 
     <div class="vision">
 
-        <div class="info">
-
+        <div class="infoVi">
+            <h2>Visión</h2>
+            <p class="limitar"> La visión de este proyecto es crear un espacio donde pueda compartir mis "conocimientos" y experiencias en el mundo de la programación. <br><br>
+                Espero que este sitio se convierta en un recurso útil para otros estudiantes y profesionales, y que sirva como un recordatorio de mi crecimiento personal y profesional
+                 a lo largo del tiempo. <br>
+                Además, quiero fomentar una comunidad de aprendizaje colaborativo donde otros estudiantes puedan aprender de mis experiencias y tal vez compartir sus experiencas (si logro crear la funcionalidad jajaja)
+            <p></p>
         </div>
         <div class="carrusel">
-
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/img/cat-cat-typing.gif" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/futuro.avif" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        
+                        <img src="/img/conocimiento.png" alt="">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
 
     </div>

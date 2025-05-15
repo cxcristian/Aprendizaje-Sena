@@ -1,52 +1,53 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #F5F5F5; /* Gris claro */
   color: #333;
   line-height: 1.6;
-  padding: 20px;
+
 }
 
 p {
   margin-bottom: 15px;
   font-size: 1rem;
 }
-.limitar{
-    max-width: 620px;
+
+.limitar {
+  max-width: 620px;
+  margin: 0 auto;
 }
 
 a {
-  color: #007BFF;
+  color: #4A90E2; /* Azul suave */
   text-decoration: none;
   transition: color 0.3s;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #2a6eb7; /* Azul más oscuro para hover */
   text-decoration: underline;
 }
 
 button {
-  background-color: #007BFF;
+  background-color: #f0f0f0;
   color: white;
   border: none;
   padding: 10px 20px;
-  margin-top: 10px;
+  
   font-size: 1rem;
-  border-radius: 5px;
+  
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-
 button:hover {
-  background-color: #0056b3;
+  background-color: #75b3f5;
 }
-
 
 h1, h2, h3 {
   color: #222;
@@ -54,31 +55,91 @@ h1, h2, h3 {
 }
 
 .header {
-    background-color: blue;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+  background-image: url('../img/campo.jpeg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  text-align: center;
+  align-items: center;
+  padding: 150px 150px;
+  height: 100%;
+}
+.botones{
+  margin-left: 20px;
 }
 
 .nav {
-    display: flex;
-    gap: 20px; /* Espacio entre los elementos de la nav */
+  display: flex;
+  
+  background-color: #a6e0d1;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
 .bienvenida{
-    display: flex;
-    
-    margin-top: 100PX;
-    width: 100%;
-    height: 320px;
-    background-color: brown;
-    justify-content: space-between ;
-    
+  display: flex;
+  margin-top: 60px;
+  width: 100%;
+  height: 320px;
+  background-color: #a6e0d1; /* Verde menta muy suave */
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 210px;
 }
-.saludo{
-    padding: 20px;
+
+.saludo {
+  padding: 20px;
+  padding-top: 45px;
 }
-.contenedor-img{
+
+.contenedor-img {
+  display: flex;
+  padding-right: 130px;
+}
+.sobreMi{
     display: flex;
-    
+  margin-top: 60px;
+  width: 100%;
+  height: 320px;
+  background-color: #a6e0d1; 
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 210px;
+}
+
+.miFoto{
+  display: flex;
+  padding-right: 130px;
+  
+}
+.info{
+  padding-top: 20px;
+  padding-right: 50px;
+}
+
+.vision{
+  display: flex;
+  margin-top: 60px;
+  
+  background-color: #a6e0d1; /* Verde menta muy suave */
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 20px;
+  
+}
+.infoVi{
+padding-left: 210px;
+padding-top: 50px;
+}
+.carrusel img {
+  width: 500px;
+  height: 450px;
+  object-fit: cover;
+  display: block; /* mejor que flex para imágenes */
+  margin: 0 auto; /* si quieres centrar la imagen dentro de cada slide */
+}
+.carrusel{
+  padding-right: 310px;
 }
