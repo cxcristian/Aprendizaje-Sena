@@ -1,35 +1,42 @@
-import './Seccioniz.css';
-import gente from '../pictures/fotoGente.jpg';
-function SeccionI(){
-    return(
+import "./Seccioniz.css";
+
+type SeccionProps = {
+  titulo: string;
+  descripcion: string;
+  imagen: string;
+  posicion: "izquierda" | "derecha";
+};
+export function Seccion({
+  titulo,
+  descripcion,
+  imagen,
+  posicion,
+}: SeccionProps) {
+  const imagenPrimero = posicion === "izquierda";
+  return (
     <>
-     <section className="bienvenida"> 
-        <Seccion />
-    </section>
-    </>
-    )
-    
-}
-export function Seccion(){
-    return(
-    <>
-        <article className="saludo" >
-            <header> 
-                <h3>Bienvenido a mi "Proyecto Aprendizaje Sena"</h3>
-            </header>
-            <article>
-                
-                <p className="limitar">Aunque me gusta llamaerlo mas "AS", este es un pequeño proyecto
-                    está pensado para subir la mayor cantidad de mis actividades relacionadas con la programación que iré realizando según
-                    el paso del tiempo. <br/>qui podras encontrar información sobre este futuro o pasado cadaver, proyectos de <a href="">Java Script</a> o lo que surja por el camino
-                    espero que esto sea un buen recuerdo e incluir muchas tecnologias :D
-                </p>
-            </article>
+      <section
+        className="seccion-flex"
+        style={{ flexDirection: imagenPrimero ? "row" : "row-reverse" }}
+      >
+        <article className="saludo">
+          <header>
+            <h3>{titulo}</h3>
+          </header>
+          <article>
+            <p className="limitar">{descripcion}</p>
+          </article>
         </article>
+
         <figure className="contenedor-img">
-            <img style={{ borderRadius: '15px' }} src={gente} alt="img proyecto"/>
+          <img
+            style={{ borderRadius: "15px" }}
+            src={imagen}
+            alt="img proyecto"
+          />
         </figure>
+      </section>
     </>
-    )
+  );
 }
-export default SeccionI;
+export default Seccion;

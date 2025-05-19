@@ -9,7 +9,7 @@ function Header() {
           <p>Creciendo en el software</p>
         </section>
       </header>
-
+    
       <nav className='naveg'>
         <section className="botones">
           <button><a href="#myInfo">SOBRE MÍ</a></button>
