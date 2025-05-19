@@ -1,0 +1,68 @@
+
+.header {
+  background-image: url('../pictures/campo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.nav{
+  position: sticky;
+  top: 0;
+  background-color: #a6e0d1; 
+  text-align: center;
+}
+.textoHead {
+    background-color: rgb(166, 224, 209, 0.7); 
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.textoHead h1,
+.textoHead p {
+  padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+a {
+  color: #4A90E2; /* Azul suave */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #2a6eb7; 
+  text-decoration: underline;
+}
+
+.naveg{
+   background-color: #a6e0d1;
+  
+}
+
+.botones{
+  padding: 10px;
+  justify-content: center;
+}
+
+button {
+  background-color: #cbfff1;
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  font-size: 1rem;
+  
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5fb45c;
+}

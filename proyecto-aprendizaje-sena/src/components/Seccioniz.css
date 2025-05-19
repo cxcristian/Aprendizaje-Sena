@@ -1,0 +1,39 @@
+
+.bienvenida{
+  display: flex;
+  margin-top: 60px;
+  width: 100%;
+  height: 320px;
+  background-color: #a6e0d1; 
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 210px;
+}
+
+.saludo {
+  padding: 20px;
+  padding-top: 45px;
+}
+
+.contenedor-img {
+  display: flex;
+  padding-right: 130px;
+}
+.sobreMi{
+    display: flex;
+  margin-top: 60px;
+  width: 100%;
+  height: 320px;
+  background-color: #a6e0d1; 
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 210px;
+}
+
+.miFoto{
+  display: flex;
+  padding-right: 130px;
+  
+}

@@ -291,6 +291,16 @@ aside {
   background-color: #57bfa3;
 }
 
+footer {
+  
+  text-align: center;
+  padding: 50px;
+  background-color: #b9efe1;
+}
+footer h2{
+  color: white;
+}
+
 @media screen and (max-width: 600px) {
   .nav {
     flex-direction: column;
