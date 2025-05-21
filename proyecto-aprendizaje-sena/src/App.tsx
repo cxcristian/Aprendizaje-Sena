@@ -1,5 +1,4 @@
-import Header  from "./components/Header";
-import Seccion from './components/SeccionI';
+import { Header,Seccion } from './components/index';
 import gente from './pictures/fotoGente.jpg';
 import me from './pictures/me.png';
 function App(){
@@ -19,6 +18,8 @@ function App(){
 
 Me considero una persona ética, con buenas habilidades blandas y una buena actitud. Me gusta ayudar a mis compañeros con cualquier duda que tengan, ya que eso también me ayuda a fortalecer mis conocimientos. Hasta ahora, mi camino no ha sido fácil; no tener estabilidad económica es un desafío, pero tengo fe y trabajo para cambiar esa situación. Eso sería un poco sobre mí. ¡Espero que disfrutes el contenido de este sitio en construcción! :D"
       imagen={me}
+      alto='350px'
+      ancho='350px'
       posicion="derecha"
       />
   
@@ -26,4 +27,4 @@ Me considero una persona ética, con buenas habilidades blandas y una buena acti
     </>
   )
 }
-export default App;
+export default App;  

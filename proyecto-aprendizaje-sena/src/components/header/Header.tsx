@@ -1,5 +1,5 @@
 import './Header.css';
-function Header() {
+export function Header() {
   return (
     <>
     
