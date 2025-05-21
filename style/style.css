@@ -301,6 +301,47 @@ footer h2{
   color: white;
 }
 
+.tabla-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 60px;
+  background-color: #f0f4f8;
+}
+
+.tabla-horario {
+  border-collapse: collapse;
+  width: 100%;
+  
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tabla-horario th,
+.tabla-horario td {
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+}
+
+.tabla-horario thead th {
+  background-color: #2c7a7b;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.tabla-horario tbody td {
+  background-color: #d1fae5;
+}
+
+.tabla-horario tr:nth-child(even) td {
+  background-color: #edfdfd;
+}
+
 @media screen and (max-width: 600px) {
   .nav {
     flex-direction: column;
