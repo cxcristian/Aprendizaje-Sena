@@ -9,7 +9,7 @@ type SeccionProps = {
   alto?: string;
   extraStyle?:  string;
 };
-export function Seccion({
+export function SeccionI({
   titulo,
   descripcion,
   imagen,
@@ -44,4 +44,4 @@ export function Seccion({
     </>
   );
 }
-export default Seccion;
+export default SeccionI;
