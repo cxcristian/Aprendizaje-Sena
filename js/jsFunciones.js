@@ -158,3 +158,76 @@ console.log("Ejercicio avanzados 1")
 /*Callback
 Crea una función que reciba un array de números y una función de callback para procesar cada elemento. Ejemplo:
 procesar([1, 2, 3], num => num * 2); // [2, 4, 6] */
+function procesar(arr, callback) {
+  return arr.map(callback);
+}
+console.log(procesar([1, 2, 3], num => num * 2)); 
+
+//2
+/*Ámbito y cierre
+Crea una función que genere un generador de saludos personalizados. La función externa recibe un saludo base, y la función interna recibe un nombre. Ejemplo:
+
+
+const saludarConHola = crearSaludo("Hola");
+saludarConHola("Ana"); // "Hola, Ana"*/
+
+function crearSaludo(saludoBase) {
+  return function(nombre) {
+    return `${saludoBase}, ${nombre}`;
+  };
+}
+
+// Ejemplo
+const saludarConHola = crearSaludo("Hola");
+console.log(saludarConHola("Carla"));
+
+//3
+/*IIFE con parámetros
+Escribe una IIFE que reciba dos números y devuelva su suma, ejecutándose inmediatamente. Ejemplo: (function(a, b) {...})(3, 5) → 8. */
+
+const suma = (function(a, b) {
+  return a + b;
+})(3, 5);
+
+console.log(suma);
+
+//4
+/*Crea un objeto persona con un método presentarse que use una arrow function para devolver una presentación. Ejemplo:
+persona.nombre = "Ana";
+persona.presentarse(); // "Mi nombre es Ana" */
+const persona = {
+  nombre: "Ana",
+  presentarse: () => `Mi nombre es ${persona.nombre}`
+};
+console.log(persona.presentarse()); 
+
+//5
+/**Rest parameters y reduce
+Escribe una función que use rest parameters para calcular el promedio de todos los números recibidos. Ejemplo: promedio(10, 20, 30) → 20. */
+function promedio(...numeros) {
+  const suma = numeros.reduce((acc, num) => acc + num, 0);
+  return numeros.length ? suma / numeros.length : 0;
+}
+
+// Ejemplo
+console.log(promedio(10, 20, 30)); // 20
+
+//6
+/*Combinación de funciones
+Crea una función componer que combine dos funciones, donde el resultado de la primera se pasa como argumento a la segunda. Ejemplo:
+const duplicar = x => x * 2;
+const sumarDiez = x => x + 10;
+const combinada = componer(duplicar, sumarDiez);
+combinada(5); // (5 * 2) + 10 = 20 */
+function componer(f1, f2) {
+  return function(x) {
+    return f2(f1(x));
+  };
+}
+
+// Ejemplo
+const duplicar = x => x * 2;
+const sumarDiez = x => x + 10;
+const combinada = componer(duplicar, sumarDiez);
+
+console.log(combinada(5)); // 20
