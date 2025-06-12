@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad DOM</title>
+    <style>
+      .tarea {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      .item-lista {
+        margin: 5px 0;
+      }
+      button {
+        padding: 5px 10px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Actividad Práctica: Manipulación del DOM</h1>
+
+    <div id="contenedor-tareas">
+      <!-- Tarea 1: Modificar texto -->
+      <div class="tarea" id="tarea1">
+        <h2>Tarea 1: Modificar Texto</h2>
+        <p id="texto-inicial">Este es un texto inicial</p>
+        <button onclick="modificarTexto()">Cambiar Texto</button>
+      </div>
+
+      <!-- Tarea 2: Cambiar estilos -->
+      <div class="tarea" id="tarea2">
+        <h2>Tarea 2: Cambiar Estilos</h2>
+        <div id="caja-estilo">Caja con estilo inicial</div>
+        <button onclick="cambiarEstilo()">Cambiar Estilo</button>
+      </div>
+
+      <!-- Tarea 3: Añadir elementos -->
+      <div class="tarea" id="tarea3">
+        <h2>Tarea 3: Añadir Elementos</h2>
+        <input type="text" id="texto" placeholder="añadir lista" />
+        <ul id="lista-dinamica">
+          <li class="item-lista">Elemento 1</li>
+          <li class="item-lista">Elemento 2</li>
+        </ul>
+        <button onclick="agregarElemento()">Añadir Elemento</button>
+      </div>
+
+      <!-- Tarea 4: Eliminar elementos -->
+      <div class="tarea" id="tarea4">
+        <h2>Tarea 4: Eliminar Elementos</h2>
+        <ul id="lista-eliminar">
+          <li class="item-lista">Elemento A</li>
+          <li class="item-lista">Elemento B</li>
+          <li class="item-lista">Elemento C</li>
+        </ul>
+        <button onclick="eliminarElemento()">Eliminar Último Elemento</button>
+      </div>
+    </div>
+
+    <script>
+      // Escribe tu código JavaScript aquí
+      const modificarTexto = () => {
+        const texto = document.getElementById("texto-inicial");
+        texto.textContent = "Texto modificado ";
+      };
+      const cambiarEstilo = () => {
+        const cajaEstilo = document.getElementById("caja-estilo");
+        cajaEstilo.style.backgroundColor = "orange";
+        cajaEstilo.style.color = "green";
+        cajaEstilo.style.padding = "20px";
+      };
+      const agregarElemento = () => {
+        const texto = document.getElementById("texto");
+        const lista = document.getElementById("lista-dinamica");
+        const nuevoElemento = document.createElement("li");
+        nuevoElemento.textContent = texto.value;
+        lista.appendChild(nuevoElemento);
+      };
+      const eliminarElemento = () => {
+        const elementos = document.querySelectorAll("#lista-eliminar li");
+        const ultimo = elementos[elementos.length - 1];
+
+        if (ultimo) {
+          ultimo.remove();
+        } else {
+          alert("No hay elementos para eliminar");
+        }
+      };
+    </script>
+  </body>
+</html>
