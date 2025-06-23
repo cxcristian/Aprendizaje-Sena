@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table class="t1"></table>
+  </body>
+  <script>
+    async function getData() {
+      const table = document.getElementById("t1");
+      const res = await fetch("https://playground.mockoon.com/users");
+      const data = await res.json();
+
+      const nombresUnicos = [];
+      const nombresVistos = new Set();
+
+      data.array.forEach((element) => {
+        if (!nombresVistos.has(item.nombre)) {
+          nombresUnicos.push(item);
+          nombresVistos.add(item.nombre);
+        }
+      });
+    }
+  </script>
+</html>

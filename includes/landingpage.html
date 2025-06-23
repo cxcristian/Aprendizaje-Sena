@@ -1,0 +1,100 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  .nav {
+    background-color: #1e0b59;
+  }
+
+  .container {
+    max-width: 1200px; /* Cambia según tu gusto */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+  }
+
+  a {
+    color: rgb(138, 140, 255);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 5vh;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  .menu {
+    display: flex;
+    gap: 5vh;
+    align-items: center;
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff6f7d;
+    width: 10vh;
+    height: 3vh;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    text-align: center;
+  }
+
+  a:hover {
+    color: white;
+    transition: 0.2s;
+  }
+
+  .contact:hover {
+    color: rgb(26, 3, 131);
+    background-color: white;
+    transition: 1.2s;
+  }
+
+  /* Responsivo opcional */
+  @media (max-width: 768px) {
+    .menu {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2vh;
+    }
+
+    .contact {
+      width: auto;
+      padding: 0.5rem 1rem;
+    }
+  }
+</style>
+
+<body>
+  <nav class="nav">
+    <div class="container">
+      <section class="home">
+        <h1>AppStorm</h1>
+      </section>
+
+      <section class="menu">
+        <a href="">Home</a>
+        <a href="">How it Looks</a>
+        <a href="">About</a>
+        <a href="">Pricing</a>
+        <a href="">Our Clients</a>
+        <a href="">Gallery</a>
+        <a href="" class="contact">Download</a>
+      </section>
+    </div>
+  </nav>
+</body>
