@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crear graficas</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <main>
+        <label for="nombreEquipo">ingrese un nombre de equipo</label> <br>
+        <input type="text" id="nombreEquipo" placeholder="Nombre del equipo">
+        <br>
+        <label for="puntaje">Ingrese el puntaje</label><br>
+        <input type="number" id="puntaje" placeholder="Puntaje"><br>
+        <button onclick="agregarEquipo()">agregar equipo</button>
+
+    </main>
+    <section class="mercado">
+        <canvas id="graficaDona"></canvas>
+    </section>
+</body>
+<script>
+    const nombreEquipo = document.getElementById('nombreEquipo').value
+    const puntajeInput = document.getElementById('puntaje').value
+    const equipos = [nombreEquipo]
+    const puntaje = [parseInt(puntajeInput)]
+    const ctx = document.getElementById('graficaDona').getContext('2d');
+    const graficaDona = new Chart(ctx,{
+        type: 'pie',
+        data:{
+            labels: equipos,
+            datasets:[{
+                label: 'puntaje por equipo',
+                data: puntaje
+            }]
+        },
+        options:{
+            text: 'Puntaje por equipo',
+        }
+    })
+    const agregarEquipo =()=>{
+        const nombreEquipo = document.getElementById('nombreEquipo').value
+        const puntajeInput = document.getElementById('puntaje').value
+        equipos.push(nombreEquipo)
+        puntaje.push(parseInt(puntajeInput))
+        graficaDona.update()
+    }
+</script>
+</html>
