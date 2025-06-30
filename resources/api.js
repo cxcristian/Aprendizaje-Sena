@@ -69,7 +69,7 @@ app.put('/datos/:id', (req, res) => {
   res.json(datos[index]);
 });
 
-// ❌ Eliminar (DELETE)
+
 app.delete('/datos/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const datos = leerDatos();
