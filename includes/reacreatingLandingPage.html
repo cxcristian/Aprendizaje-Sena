@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarterApp</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #061e88;
+    }
+    .normal{
+
+    /*Menu Section*/
+    .menu-container{
+      width: 100%;
+      background-color: rgb(211, 207, 0);
+      margin: 0 auto;
+    }
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 200px;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav button {
+      padding: 10px 20px;
+      background-color: #1f0277;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /*Impact Section*/
+    .impactZone {
+      max-width: 1200px;
+      background-color: #061e88;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .impactText {
+      width: 40%;
+      text-align: center;
+      background-color: #1e0b59;
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 0 auto;
+    }
+
+    .impactText h3 {
+      color: #ffffff;
+      font-size: 2rem;
+    }
+    .impactText h1 {
+      color: #ffffff;
+      font-size: 3rem;
+      
+    }
+    .impactText button {
+      background-color: #ff6f7d;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      
+    }
+
+    .impactImage {
+      width: 50%;
+      position: relative;
+      /*background-color: #1e0b59;*/
+    }
+    .impactImage img {
+      width: 100%;
+      height: auto;
+      margin-bottom: -25px;
+    }
+    .impactImage h2 {
+      text-align: center;
+      background-color: #1e0b59;
+      border-radius: 5px;
+      color: #ffff;
+      margin-bottom: -6px;
+      padding: 5px;
+    }
+
+    /*Main Dashboard Section*/
+    .mainDashBoard {
+      
+      background-color: #d693c5;
+      display: flex;
+      align-items: flex-start;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    .formulario {
+        background-color: #413958;
+        padding: 2rem;
+        border-radius: 10px;
+        color: white;
+        width: 30%;
+        margin: 20px;
+    }
+    .formulario h1{
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      color: #ffffff;
+      background-color: #000000;
+      padding: 10px;
+      border-radius: 5px;
+
+    }
+    .form{
+        
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        color: black  ;
+    }
+    .form button{
+      width: 30%;
+      padding: 5px;
+      background-color: #000000;
+      color: #ffffff;
+      margin-top: 5px;
+    }
+    .dash{
+        width: 70%;
+        
+        
+    }
+    .cards{
+        display: flex;
+        gap: 20px;
+    }
+    .card{
+    background-color: #ffffff;
+    padding: 2rem;
+    color: rgb(0, 0, 0);
+    border-radius: 7px;
+    border: 1px solid #000000;              
+    
+    }
+
+    .analiticaGrafica {
+      display: flex;
+      justify-content: space-between;
+      background-color: #ffe600;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .analitica {
+      width: 70%;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px;
+      height: 100%;
+    }
+    .graficas{
+      display: flex;
+      gap: 20px;
+      width: 30%;
+      text-align: center;
+      flex-wrap: wrap;
+      
+    }
+  .grafica-container {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  background-color: rgb(112, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.grafica-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+}
+    .dark{
+        /*Menu Section*/
+        .menu-container {
+            width: 100%;
+            background-color: #1e0b59;
+            margin: 0 auto;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 200px;
+        }
+        .menu h1 {
+            color: white;
+         
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav button {
+            padding: 10px 20px;
+            background-color: #ff6f7d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+    
+        /*Impact Section*/
+        .impactZone {
+            width: 100%;
+            background-color: #d693c5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
+    
+        .impactText {
+            width: 30%;
+            text-align: center;
+            background-color: #ffe600;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 0 auto;
+        }
+    
+        .impactText h3 {
+            color: #ffffff;
+            font-size: 5rem;
+        }
+        .impactText h1 {
+            color: #ffffff;
+            font-size: 3rem;
+    
+        }
+        .impactText button {
+            background-color: #ff6f7d;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+    
+        }
+    
+        .impactImage {
+            width: 50%;
+            position: relative;
+            background-color: #ca6cb3;
+    
+            /*background-color:#1e0b59;*/
+            
+        }
+        
+        .impactImage img {
+            width: 100%;
+            height:auto ;
+            margin-bottom:-0px ;
+            
+    }
+    .mainImage h2 {
+      text-align: center;
+      background-color: #1e0b59;
+      border-radius: 5px;
+      color: #ffff;
+      margin-bottom: -6px;
+      padding: 5px;
+    }
+}
+  </style>
+
+  <body>
+    <main class="menu-container">
+      <section class="menu">
+        <h1>CarterApp</h1>
+        <nav class="nav">
+          <a href="">Home</a>
+          <a href="">How it Looks</a>
+          <a href="">About</a>
+          <a href="">Pricing</a>
+          <a href="">Our Clients</a>
+          <a href="">Gallery</a>
+          <button>Descargar</button>
+          <button id="cambio">Cambio Tema</button>
+        </nav>
+      </section>
+    </main>
+
+    <section class="impactZone">
+      <main class="impactText">
+        <h3>Get less money</h3>
+        <h1>
+          All Your Activities <br />
+          In One Place
+        </h1>
+      </main>
+      <figure class="impactImage">
+        <img src="/img/impactImage.png" alt="" />
+        <h2>!!MENOS GANANCIAS¡¡</h2>
+      </figure>
+    </section>
+
+
+    <section class="mainDashBoard">
+        <aside class="formulario">
+            <h1>Ingreso de datos</h1>
+            <form class="form" action="enviar" method="post">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="" id="nombre">
+
+                <label for="edad">Edad</label>
+                <input type="number" name="" id="edad">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea rows="5" cols="30" name="" id="mensaje"></textarea>
+
+                <label for="url">video</label>
+                <input type="url" name="" id="url">
+
+                <button id="enviar" type="button">Enviar</button>
+            </form>
+            
+        </aside>
+        
+        <section class="dash">
+            <h1>User Experience</h1>
+            <section class="cards">
+                
+                <section class="card">
+                    <h2>Card 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+            </section>
+            <section class="card">
+                    <h2>Card 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+            </section>
+            <section class="card">
+                    <h2>Card 3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+            </section>
+        </section>
+        <hr>
+        <section class="analiticaGrafica">
+        <section class="analitica">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>NOMBRE</th>
+                  <th>EDAD</th>
+                  <th>MENSAJE</th> 
+                  <th>VIDEO</th>
+                </tr>
+                <tbody>
+                  <!--Aqui se añadira con js los datos de una tabla-->
+                </tbody>
+              </thead>
+            </table>
+   
+        </section>
+        <section class="graficas">
+           <div class="grafica-container">
+                <canvas id="grafica"></canvas>
+            </div>
+            <div class="grafica-container">
+                <canvas id="dona"></canvas>
+            </div>
+        </section>
+        </section>
+       
+    </section>
+  </body>
+
+  <script>
+
+    const cambio = document.getElementById("cambio")
+    const body = document.querySelector("body")
+    const temaGuardado = localStorage.getItem("tema") || "normal"
+
+    body.className = temaGuardado
+
+    cambio.addEventListener("click",()=>{
+        const nuevoTema = body.className === "normal" ? "dark" : "normal"
+        body.className = nuevoTema
+        localStorage.setItem("tema", nuevoTema)
+    })
+
+    
+  const enviar = document.getElementById("enviar")
+  enviar.addEventListener("click", async (e) => {
+  e.preventDefault(); // evita que el formulario se recargue
+
+  const nombre = document.getElementById("nombre").value;
+  const edad = parseInt(document.getElementById("edad").value);
+  const mensaje = document.getElementById("mensaje").value;
+  const link = document.getElementById("url").value;
+
+  const datos = { nombre, edad, mensaje, link };
+    //envio datos
+  try {
+    const respuesta = await fetch("http://localhost:3000/datos", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(datos)
+    });
+
+    const resultado = await respuesta.json();
+
+    if (respuesta.ok) {
+      alert("Datos enviados correctamente");
+      console.log("Datos enviados:", resultado);
+    } else {
+      alert("Error al enviar: " + resultado.error);
+      console.error("Error al enviar:", resultado.error);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Error al conectar con el servidor");
+  }
+});
+//cartga de tabla automatica
+(() => {
+  async function cargarDatos() {
+    try {
+      const respuesta = await fetch("http://localhost:3000/datos");
+      const datos = await respuesta.json();
+
+      const tbody = document.querySelector("tbody");
+      tbody.innerHTML = ""; // Limpiar antes de agregar
+
+      datos.forEach((item, index) => {
+        const fila = document.createElement("tr");
+        fila.innerHTML = `
+          <td>${index + 1}</td>
+          <td>${item.nombre}</td>
+          <td>${item.edad}</td>
+          <td>${item.mensaje}</td>
+          <td><a href="${item.link}" target="_blank">Ver Video</a></td>
+        `;
+        tbody.appendChild(fila);
+        return datos
+      });
+    } catch (error) {
+      console.error("Error al cargar datos:", error);
+    }
+  }
+
+  // Llamar a la función al iniciar
+  cargarDatos();
+})();
+
+//grafica de barra
+const grafica = document.getElementById("grafica").getContext("2d")
+new Chart(grafica,{
+    type: "bar",
+    data: {
+        labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio"],
+        datasets: [{
+            label: "Usuarios",
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54,162,235,1)',
+                'rgba(255,206,86,1)',
+                'rgba(75,192,192,1)',
+                'rgba(153,102,255,1)',
+                'rgba(255,159,64,1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+  }
+)
+
+const dona = document.getElementById("dona").getContext("2d")
+new Chart("dona",{
+  type: "doughnut",
+  data: {
+    labels: ["Red", "Blue", "Yellow"],
+    datasets: [{
+      label: "My First Dataset",
+      data: [300, 50, 100],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54,162,235,1)',
+        'rgba(255,206,86,1)'
+      ],
+      borderWidth: 1
+    }]
+  }
+})
+
+  </script>
+</html>
