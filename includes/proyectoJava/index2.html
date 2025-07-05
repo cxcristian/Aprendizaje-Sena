@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi App CRUD</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+   
+    <div class="banner-texto">
+   
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="form-section">
+      <h3>Formulario actual: <span id="formularioActivo">Películas</span></h3>
+      <form id="dataForm">
+        <input type="text" placeholder="Nombre" id="title" />
+        <input type="text" placeholder="Autor/autista" id="desc" />
+        <input type="text" placeholder="Calificación" id="cal" />
+        <input type="text" placeholder="Link de YouTube" id="linkInput" />
+        <button type="submit">Agregar</button>
+      </form>
+
+      <div class="crud-section">
+        <input type="text" placeholder="ID para actualizar o buscar" id="updateId" />
+        <button id="updateBtn">Actualizar</button>
+        <button id="deleteBtn">Eliminar</button>
+        <button id="cargar">Cargar DB</button>
+        <button id="change">Cambiar tema</button>
+      </div>
+
+      <div class="media-section">
+        <h3>Vista previa de video</h3>
+        <div id="youtubeEmbedContainer">
+          <p>No hay video seleccionado</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tables-section">
+      <div class="table-wrapper">
+        <h2>Películas</h2>
+        <div class="table-container">
+          <table id="moviesTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Autor</th>
+                <th>Calificación</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody> 
+              <!-- Películas aquí -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <h2>Música</h2>
+        <div class="table-container">
+          <table id="musicTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Artista</th>
+                <th>Género</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Música aquí -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
